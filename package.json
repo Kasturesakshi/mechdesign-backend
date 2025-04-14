@@ -1,28 +1,11 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "name": "backend",
-=======
   "name": "mechdesign-backend",
->>>>>>> LoginBackend
-=======
-  "name": "mechdesign-backend",
->>>>>>> addpartsinfo
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-=======
-=======
->>>>>>> addpartsinfo
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Kasturesakshi/mechdesign-backend.git"
@@ -34,22 +17,11 @@
     "url": "https://github.com/Kasturesakshi/mechdesign-backend/issues"
   },
   "homepage": "https://github.com/Kasturesakshi/mechdesign-backend#readme",
-<<<<<<< HEAD
->>>>>>> LoginBackend
-=======
->>>>>>> addpartsinfo
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "body-parser": "^2.2.0",
     "cors": "^2.8.5",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     "dotenv": "^16.5.0",
->>>>>>> LoginBackend
-=======
-    "dotenv": "^16.5.0",
->>>>>>> addpartsinfo
     "express": "^5.1.0",
     "mysql": "^2.18.1"
   }
