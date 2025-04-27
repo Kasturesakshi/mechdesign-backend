@@ -1,23 +1,34 @@
-const db = require('../config/db');
+const db = require('../config/db'); // Make sure correct db import
 
-const addDefect = (data, callback) => {
+const addDefect = (defectData, callback) => {
+  const {
+    partName,
+    operatorName,
+    mobileNo1,
+    jobDefectDate,
+    supervisorName,
+    mobileNo2,
+    totalQuantity,
+    reasonDefect,
+  } = defectData;
+
   const sql = `
-    INSERT INTO defects 
-    (partName, operatorName, mobileNo1, jobDefectDate, supervisorName, mobileNo2, totalQuantity, reasonDefect) 
+    INSERT INTO defects (partName, operatorName, mobileNo1, jobDefectDate, supervisorName, mobileNo2, totalQuantity, reasonDefect)
     VALUES (?, ?, ?, ?, ?, ?, ?, ?)
   `;
-  const values = [
-    data.partName,
-    data.operatorName,
-    data.mobileNo1,
-    data.jobDefectDate,
-    data.supervisorName,
-    data.mobileNo2,
-    data.totalQuantity,
-    data.reasonDefect,
-  ];
 
-  db.query(sql, values, callback);
+  db.query(
+    sql,
+    [partName, operatorName, mobileNo1, jobDefectDate, supervisorName, mobileNo2, totalQuantity, reasonDefect],
+    (err, result) => {
+      if (err) {
+        console.error("Error inserting defect into DB:", err);
+        callback(err, null);
+      } else {
+        callback(null, result);
+      }
+    }
+  );
 };
 
 module.exports = { addDefect };
